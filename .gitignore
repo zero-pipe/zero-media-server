@@ -1,0 +1,66 @@
+# Build output (CMake / IDE opened directories)
+build/
+scripts/
+build-*/
+build_win/
+build_zmk/
+build-scan/
+out/
+cmake-build-*/
+generated/
+
+# clangd / IntelliSense (generated; keep .clangd tracked)
+compile_commands.json
+.cache/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+.idea/
+
+# Compiled
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+*.ilk
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Testing/
+
+# Local config overrides
+config_a.ini
+config_b.ini
+cmake/build.local.cmake
+conf/*.bak
+conf/config.local.ini
+conf/config.*.local.ini
+
+# Runtime media root (record/VOD/HLS cache; create locally per conf/config.ini)
+www/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Local editor style (keep on disk, do not commit)
+.clang-format
+.editorconfig
+.gitattributes
+.clangd
+# Local tools / stress scripts (keep on disk, do not commit)
+tools/

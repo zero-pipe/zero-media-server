@@ -1,0 +1,8 @@
+[submodule "3rdpart/zero-tool-kit"]
+	path = 3rdpart/zero-tool-kit
+	url = https://github.com/zero-pipe/zero-tool-kit.git
+	branch = master
+[submodule "3rdpart/zero-media-kit"]
+	path = 3rdpart/zero-media-kit
+	url = https://github.com/zero-pipe/zero-media-kit.git
+	branch = master

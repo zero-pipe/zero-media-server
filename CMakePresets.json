@@ -1,0 +1,55 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 14,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "windows-base",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "ZTK_ENABLE_WEPOLL": "ON",
+        "ZTK_BUILD_EXAMPLES": "ON",
+        "ZTK_ENABLE_OPENSSL": "ON"
+      }
+    },
+    {
+      "name": "windows-minimal",
+      "displayName": "Windows Minimal (RTMP/RTSP/HTTP)",
+      "description": "No SRT/WebRTC. Run tools/configure.ps1 for full features.",
+      "inherits": "windows-base"
+    },
+    {
+      "name": "linux-base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ZTK_BUILD_EXAMPLES": "ON",
+        "ZTK_ENABLE_OPENSSL": "ON"
+      }
+    },
+    {
+      "name": "linux-minimal",
+      "displayName": "Linux Minimal",
+      "inherits": "linux-base"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "windows-release",
+      "configurePreset": "windows-minimal",
+      "configuration": "Release"
+    },
+    {
+      "name": "linux-release",
+      "configurePreset": "linux-minimal"
+    }
+  ]
+}

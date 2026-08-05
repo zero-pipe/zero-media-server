@@ -1,0 +1,17 @@
+# Copy to cmake/build.local.cmake (gitignored) or run tools/configure.ps1 / configure.sh
+#
+# Path input (all equivalent on Windows):
+#   D:/srt
+#   D:\srt
+#   "C:/Program Files/OpenSSL-Win64"
+# configure scripts normalize to forward slashes and verify layout before writing this file.
+#
+# Windows SRT layout:  <ZMS_SRT_ROOT>/include/srt/srt.h , lib/srt.lib , bin/srt.dll
+# Windows OpenSSL:     <OPENSSL_ROOT_DIR>/include/openssl/ssl.h , lib/ or lib/VC/x64/MD/
+
+# set(ZMS_ENABLE_SRT ON CACHE BOOL "Enable SRT transport" FORCE)
+# set(ZMS_SRT_ROOT "D:/srt" CACHE PATH "libsrt install prefix (Windows)" FORCE)
+
+# set(ZMS_ENABLE_WEBRTC ON CACHE BOOL "Enable WebRTC WHEP/WHIP" FORCE)
+
+# set(OPENSSL_ROOT_DIR "C:/Program Files/OpenSSL-Win64" CACHE PATH "OpenSSL install prefix" FORCE)
